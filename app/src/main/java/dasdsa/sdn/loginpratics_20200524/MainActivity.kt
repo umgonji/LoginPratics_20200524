@@ -3,6 +3,7 @@ package dasdsa.sdn.loginpratics_20200524
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.math.log
 
@@ -23,9 +24,11 @@ class MainActivity : AppCompatActivity() {
             if( inputId == "admin@admin.com" && inputPw == "qwer") {
 
                 Log.d("로그인확인", "관리자입니다.")
+                Toast.makeText(this, "관리자 입니다.", Toast.LENGTH_SHORT ).show()
             }
             else {
                 Log.d("로그인확인", "로그인에 실패했습니다.")
+                Toast.makeText(this, "로그인 실패.", Toast.LENGTH_SHORT ).show()
             }
 
 
