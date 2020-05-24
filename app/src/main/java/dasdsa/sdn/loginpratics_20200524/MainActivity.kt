@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +19,24 @@ class MainActivity : AppCompatActivity() {
 
             Log.d("입력한아이디", inputId)
             Log.d("입력비번", inputPw)
+
+//            if (inputId == "admin") {
+//                Log.d("입력ID확인", "admin임")
+//            }
+//            else if(inputId == "admin@admin.com") {
+//                Log.d("입력ID확인", "관리자이메일임")
+//            }
+//            else {
+//                Log.d("입력ID확인", "틀린 아이디")
+//            }
+
+            when (inputId) {
+                "admin" -> { Log.d("입력ID", "관리자") }
+                "admin@admin.com" -> {
+                    Log.d("입력ID", "관리자이메일")
+                }
+                else -> { Log.d("입력ID", "틀린ID") }
+            }
 
         }
     }
