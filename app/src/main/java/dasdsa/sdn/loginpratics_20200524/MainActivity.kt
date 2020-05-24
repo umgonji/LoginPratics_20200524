@@ -20,6 +20,15 @@ class MainActivity : AppCompatActivity() {
             Log.d("입력한아이디", inputId)
             Log.d("입력비번", inputPw)
 
+            if( inputId == "admin@admin.com" && inputPw == "qwer") {
+
+                Log.d("로그인확인", "관리자입니다.")
+            }
+            else {
+                Log.d("로그인확인", "로그인에 실패했습니다.")
+            }
+
+
 //            if (inputId == "admin") {
 //                Log.d("입력ID확인", "admin임")
 //            }
@@ -30,13 +39,13 @@ class MainActivity : AppCompatActivity() {
 //                Log.d("입력ID확인", "틀린 아이디")
 //            }
 
-            when (inputId) {
-                "admin" -> { Log.d("입력ID", "관리자") }
-                "admin@admin.com" -> {
-                    Log.d("입력ID", "관리자이메일")
-                }
-                else -> { Log.d("입력ID", "틀린ID") }
-            }
+//            when (inputId) {
+//                "admin" -> { Log.d("입력ID", "관리자") }
+//                "admin@admin.com" -> {
+//                    Log.d("입력ID", "관리자이메일")
+//                }
+//                else -> { Log.d("입력ID", "틀린ID") }
+//            }
 
         }
     }
